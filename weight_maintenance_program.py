@@ -3,6 +3,7 @@
 #IMPORTS
 import sys
 
+# output information to display to the user
 def finalOutput(userData):
     currentBMR = userData[5]
     currentBMI = userData[7]
@@ -17,6 +18,7 @@ def finalOutput(userData):
     print("\nThanks for using the Weight Maintenance Program.\n")
     quit()
 
+# check bmi categories
 def bmiCategories(userData):
     # Standard BMI Categories
     currentBMI = userData[7]
@@ -36,7 +38,7 @@ def bmiCategories(userData):
     userData.append(standardBMICategory)
     return userData
 
-
+# calculate output data
 def calculations(userData):
     userHeight = userData[2]
     userWeight = userData[3]
@@ -51,6 +53,7 @@ def calculations(userData):
     userData.append(currentBMI)
     return userData
 
+# check whether the user is female or male
 def checkGender(userData):
     # extract data
     userGender = userData[1]
@@ -68,6 +71,7 @@ def checkGender(userData):
         userData.append(currentBMR)
         return currentBMR
 
+# input amount of exercise function
 def inputAmountExercise(userData):
     while True:
         try:
@@ -101,6 +105,7 @@ def inputAmountExercise(userData):
                 else:
                     print("Sorry that is not valid, please try again.")
 
+# input weight function
 def inputWeight(userData):
     while True:
         try:
@@ -117,7 +122,7 @@ def inputWeight(userData):
                 else:
                     print("Sorry!")
 
-
+# input height function
 def inputHeight(userData):
     while True:
         try:
@@ -134,6 +139,7 @@ def inputHeight(userData):
                 else:
                     print("Sorry!")
 
+# input gender function
 def inputGender(userData):
     while True:
         try:
@@ -154,6 +160,7 @@ def inputGender(userData):
             else:
                 print('That is not a valid input. Please try again.')
 
+# input age function
 def inputAge():
     while True:
         try:
@@ -171,7 +178,7 @@ def inputAge():
                 print('You are not within the Membership age range')
                 sys.exit()# ends the program if the user is not withing the membership age range
 
-
+# welcome message function
 def welcomeMessage():
     print("--------------------------------------------------")
     print("----Welcome to the Weight Maintenance Program!----")
